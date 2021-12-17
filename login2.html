@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>肇庆学院专业发展中心远程教育培训平台</title>
+<meta name="Keywords" content="教育,网络,数字校园,教育信息化,科技,网站开发,软件开发,远程教育">
+<meta name="description" content="广州昊誉信息科技有限公司成立于2012年，公司以计算机软件技术为基础，立足于教育信息化行业，为客户提供教育信息化相关软件开发及技术支持的服务 ，旨在成为专业的教育信息化建设解决方案提供商。">
+<meta content="广州昊誉信息科技有限公司" name="author"/>
+<link rel="stylesheet" href="css/library/reset.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+	<!--start #g-logWrap -->
+	
+	<!--end #g-logWrap -->
+<script type="text/javascript" src="js/library/jquery.js"></script>
+<script type="text/javascript" src="js/library/jquery.dsTab.js"></script>
+<script type="text/javascript" src="js/login.js"></script>0
+<script type="text/javascript">
+$(function(){
+
+//以下代码仅为演示用,具体传入参数请参看接口描述详情页.
+//需要引用jquery库
+
+	function formatterDateTime() {
+	  var date=new Date()
+	  var month=date.getMonth() + 1
+	        var datetime = date.getFullYear()
+	                + ""// "年"
+	                + (month >= 10 ? month : "0"+ month)
+	                + ""// "月"
+	                + (date.getDate() < 10 ? "0" + date.getDate() : date
+	                        .getDate())
+	                + ""
+	                + (date.getHours() < 10 ? "0" + date.getHours() : date
+	                        .getHours())
+	                + ""
+	                + (date.getMinutes() < 10 ? "0" + date.getMinutes() : date
+	                        .getMinutes())
+	                + ""
+	                + (date.getSeconds() < 10 ? "0" + date.getSeconds() : date
+	                        .getSeconds());
+	 }
+
+	$.ajax({
+	    type: 'post',
+	    url: 'http://route.showapi.com/341-1',
+	    dataType: 'json',
+	    data: {
+	        // "showapi_timestamp": formatterDateTime(),
+	        "showapi_appid": '59754', //这里需要改成自己的appid
+	        "showapi_sign": 'a27d6188e759456fb5d912ced8834d60',  //这里需要改成自己的应用的密钥secret
+	        "page":"1",
+	        "maxResult":"20"
+
+	    },
+
+	    error: function(XmlHttpRequest, textStatus, errorThrown) {
+	        alert("操作失败!");
+	    },
+	    success: function(result) {
+	        console.log(result) //console变量在ie低版本下不能用
+	        alert(result.showapi_res_code)
+	    }
+	});
+
+})
+</script>
+</body>
+</html>

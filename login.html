@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>肇庆学院专业发展中心远程教育培训平台</title>
+<meta name="Keywords" content="教育,网络,数字校园,教育信息化,科技,网站开发,软件开发,远程教育">
+<meta name="description" content="广州昊誉信息科技有限公司成立于2012年，公司以计算机软件技术为基础，立足于教育信息化行业，为客户提供教育信息化相关软件开发及技术支持的服务 ，旨在成为专业的教育信息化建设解决方案提供商。">
+<meta content="广州昊誉信息科技有限公司" name="author"/>
+<link rel="stylesheet" href="css/library/reset.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+	<!--start #g-logWrap -->
+	<div id="g-logWrap">
+		<!--start #g-tp 顶部--><!--  class="g-fx-tp" -->
+		<div id="g-logTp">
+			<div class="g-tpc f-cb">
+				<!--start #g-logo 标志-->
+				<h1 class="g-logo"><a href="index.html" class="logo"><img src="images/logo.png" alt=""></a><span class="txt">肇庆学院专业发展中心远程教育培训平台</span></h1>
+				<!--end #g-logo 标志-->
+			</div>
+		</div>
+		<!--end #g-tp 顶部-->
+		<!--start .g-log-bn-->
+		<div id="g-log-bn">
+			<ul class="m-slide-lst">
+				<li><img src="images/login-banner1.jpg" alt=""></li>
+				<li><img src="images/login-banner2.jpg" alt=""></li>
+			</ul>
+			<a href="javascript:void(0);" class="u-bn-prev"></a>
+			<a href="javascript:void(0);" class="u-bn-next"></a>
+		</div>
+		<!--end .g-log-bn-->
+		<!--start #g-logBox 登录框-->
+		<div id="g-logBox">
+			<div class="m-log-box">
+				<div class="m-tab-li f-cb">
+					<a href="javascript:void(0);" class="item1 z-crt"><span>账号登录</span></a>
+				</div>
+				<div class="m-tab-cont f-cb">
+					<div class="m-log-block">
+						<form action="">
+							<label class="m-ipt-mod m-ipt-account">
+								<input type="text" placeholder="用户名" class="u-ipt">
+								<div class="login-popup-hint">
+									<i></i>
+									<span class="txt">请输入正确的帐号！</span>
+								</div>
+								<b class="icon-war-error ico"></b>
+							</label>
+							<label class="m-ipt-mod m-ipt-password">
+								<input type="password" placeholder="密码" class="u-ipt">
+								<div class="login-popup-hint">
+									<i></i>
+									<span class="txt">你的密码不正确，请重新输入！</span>
+								</div>
+								<b class="icon-war-error ico"></b>
+							</label>
+							<div class="m-row f-cb">
+								<label for="" class="m-diy-checkbox" onselectstart="return false">
+									<i class="u-checkbox z-slt"></i>
+									<span>5天内免登录</span>
+								</label>
+								<a href="#" class="fg-pw">找回密码</a>
+							</div>
+							<div class="m-btn-row">
+								<a href="../user/index.html" class="main-btn1 btn"><em>登录</em></a>
+							</div>
+							<div class="link-reg">
+								<span>还没有账号？<a href="#">免费注册</a></span>
+							</div>
+						</form>
+					</div><!--end .m-log-block 帐号密码登录-->
+				</div>
+			</div>
+		</div>
+		<!--end #g-logBox 登录框-->
+		<!--start #g-logft 登录页面底部-->
+		<div id="g-logft">
+			<div class="g-ftc">
+				<p><span>主办单位：肇庆学院</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>地址：中国广东省肇庆市端州区肇庆大道</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>电话：0758-2716233</span></p>
+				<p><span>粤ICP备05008891号</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>Copyright&nbsp;&nbsp;&nbsp;&nbsp;2004-2013&nbsp;&nbsp;&nbsp;&nbsp;肇庆学院版权所有</span></p>
+			</div>
+		</div> 
+		<!--end #g-logft 登录页面底部-->
+	</div>
+	<!--end #g-logWrap -->
+<script type="text/javascript" src="js/library/jquery.js"></script>
+<script type="text/javascript" src="js/library/jquery.dsTab.js"></script>
+<script type="text/javascript" src="js/login.js"></script>0
+<script type="text/javascript">
+$(function(){
+	$('#g-log-bn').dsTab({
+		itemEl        : '.m-slide-lst li',
+		btnElName     : 'm-fouse',
+        btnItem       : 'a',
+	    maxSize       : 5,
+	    currentClass  : 'z-crt', //按钮当前样式
+        autoCreateTab : false,
+	    prev          : '.u-bn-prev',
+        next          : '.u-bn-next',
+	    changeType    : 'fade',
+	    change        : true,
+	    changeTime    : 5000,
+	    overStop      : false,
+	});
+	
+	//帐号错误提示框
+	/*loginJs.indexs.accountPopupHint({
+		txt : "请输入正确的帐号哦！"
+	});*/
+
+	//密码错误提示框
+	/*loginJs.indexs.passwordPopupHint({
+		txt : "密码错误，请重新输入密码！"
+	});*/
+
+})
+</script>
+</body>
+</html>
